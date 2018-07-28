@@ -3,6 +3,7 @@ const webpack = require('webpack')
 
 module.exports = {
   devtool: 'eval-source-map',
+  mode: 'development',
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
