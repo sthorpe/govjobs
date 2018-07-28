@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Grid, Row, Col, Button } from 'react-bootstrap'
-import InfoColumn from '../components/InfoColumn'
+import InfoTable from '../components/InfoTable'
 import {Redirect} from 'react-router-dom'
 
 
@@ -33,28 +33,20 @@ class AgencyMenu extends React.Component {
   	render(){
 
   		if(this.state.goUpload){
-  			return (<Redirect push to="/upload_contract" />);
+  			return (<Redirect push to="/upload_offer" />);
   		}
 
   		return(
   			<div>
 			    <Grid>
 				   	<Row>
-				   		<Col sm={4} md={4}>
-				    		<InfoColumn style={style} tableHeader={"Name"} entry1={"dummy"} entry2={"dummy"} entry3={"dummy"}/>
-				    	</Col>
-				   
-				   		<Col sm={4} md={4}>
-				    		<InfoColumn style={style} tableHeader={"Wealth"} entry1={"dummy"} entry2={"dummy"} entry3={"dummy"}/>
-				    	</Col>
-				    
-				    	<Col sm={4} md={4} style={style}>
-				    		<InfoColumn style={style} tableHeader={"Hash"} entry1={"dummy"} entry2={"dummy"} entry3={"dummy"}/>
-				    	</Col>
+
+				   		<InfoTable/>
+				   		
 				    </Row>
 				    <Row>
 				    	<Col xs={6} xsOffset={5}>
-				    		<Button style={{margin: "10px"}} onClick={this.goToUpload}>Upload Contract</Button>
+				    		<Button style={{margin: "10px"}} onClick={this.goToUpload}>Upload Offer</Button>
 				    	</Col>
 				    </Row>
 			    </Grid>

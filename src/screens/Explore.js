@@ -16,25 +16,15 @@ class Explore extends React.Component {
 	constructor(props, context) {
 	    super(props, context);    
 	    
-	    this.goToUpload = this.goToUpload.bind(this);
-
-	    this.state = {
-	     
-	      goUpload: false
-	      
-	    };
+	    
   	}
 
 
-  	goToUpload() {
-  		this.setState({goUpload: true});
-  	}
+  	
 
   	render(){
 
-  		if(this.state.goUpload){
-  			return (<Redirect push to="/upload_contract" />);
-  		}
+  		
 
   		return(
   			<div>
@@ -52,11 +42,7 @@ class Explore extends React.Component {
 				    		<InfoColumn style={style} tableHeader={"Hash"} entry1={"dummy"} entry2={"dummy"} entry3={"dummy"}/>
 				    	</Col>
 				    </Row>
-				    <Row>
-				    	<Col xs={6} xsOffset={5}>
-				    		<Button style={{margin: "10px"}} onClick={this.goToUpload}>Upload Contract</Button>
-				    	</Col>
-				    </Row>
+				    
 			    </Grid>
 			    
 			</div>

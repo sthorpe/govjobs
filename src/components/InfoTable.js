@@ -8,25 +8,32 @@ const InfoTable = (props) => (
       <Panel.Body>
         <Table>
           <thead>
+            
             <tr>
               <th>Agency</th>
-            </tr>
-            <tr>
+          
+        
               <th>Request</th>
-            </tr>
-            <tr>
+        
+            
               <th>Offer Link</th>
             </tr>
           </thead>
           <tbody>
             <tr>   
-              <td>{props.entry1}</td>
+              <td>dummy</td>
+              <td>dummy</td>
+              <td>dummy</td>
             </tr>
             <tr>
-              <td>{props.entry2}</td>
+              <td>dummy</td>
+              <td>dummy</td>
+              <td>dummy</td>
             </tr>
             <tr>
-              <td>{props.entry3}</td>
+              <td>dummy</td>
+              <td>dummy</td>
+              <td>dummy</td>
             </tr>
           </tbody>
         </Table>
