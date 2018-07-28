@@ -2,6 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Well, Grid, Row, Col, Navbar, Nav, NavItem, NavDropdown, MenuItem, pullRight } from 'react-bootstrap';
 
+const NotBlue = {
+  color: "white",
+  listStyle: "none"
+}
+
 const NavBar = () => (
   <Grid>
     <Navbar inverse collapseOnSelect>
@@ -14,10 +19,10 @@ const NavBar = () => (
     <Navbar.Collapse>
       <Nav>
         <NavItem eventKey={1}>
-          <Link to={'/home'}>Home</Link>
+          <Link style={NotBlue} to={'/home'}>Home</Link>
         </NavItem>
         <NavItem eventKey={2}>
-          <Link to={'/counter'}>Counter</Link>
+          <Link style={NotBlue} to={'/counter'}>Counter</Link>
         </NavItem>
         <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
           <MenuItem eventKey={3.1}>Action</MenuItem>
