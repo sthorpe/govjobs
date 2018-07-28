@@ -4,7 +4,7 @@ import { Well, Grid, Row, Col, Navbar, Nav, NavItem, NavDropdown, MenuItem, pull
 
 const NotBlue = {
   color: "white",
-  listStyle: "none"
+  listStyle: "none",
 }
 
 const NavBar = () => (

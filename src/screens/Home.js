@@ -6,7 +6,8 @@ import { Button,
 	Popover, 
 	Tooltip, 
 	OverlayTrigger, 
-	form, FormGroup, 
+	form, 
+	FormGroup, 
 	FormControl, 
 	ControlLabel } from 'react-bootstrap'
 
@@ -31,6 +32,7 @@ class Home extends React.Component{
 	    this.handleChange =this.handleChange.bind(this);
 	    this.handleChangePass = this.handleChangePass.bind(this);
 	    this.signIn = this.signIn.bind(this);
+	    this.goToExlore = this.goToExlore.bind(this);
 
 	    this.email = '';
 
@@ -40,7 +42,8 @@ class Home extends React.Component{
 	      show: false,
 	      emailText: '',
 	      passwordText: '',
-	      redirect: false
+	      redirect: false,
+	      goExplore: false
 	      
 	    };
   	}
@@ -67,9 +70,10 @@ class Home extends React.Component{
     	
     	
     	this.setState({redirect: true});
-    	console.log("rrrr");
     	
     }
+
+    goToExlore() {this.setState({goExplore: true});}
    
 
     render(){
@@ -84,6 +88,10 @@ class Home extends React.Component{
     		return (<Redirect push to="/home" />);
   		}
 
+  		if (this.state.goExplore) {
+  			return (<Redirect push to="/explore" />);
+  		}
+
     	return (
     		<div>
 
@@ -96,7 +104,7 @@ class Home extends React.Component{
 					  	</div>
 
 					  	<div style={{margin: "10px"}}>
-					  		<Button bsStyle="primary" bsSize="large" >
+					  		<Button bsStyle="primary" bsSize="large" onClick={this.goToExlore}>
 					    		Explore
 					  		</Button>	
 				  		</div>
