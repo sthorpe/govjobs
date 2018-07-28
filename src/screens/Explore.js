@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Grid, Row, Col, Button } from 'react-bootstrap'
 import InfoColumn from '../components/InfoColumn'
+import InfoLinksColumn from '../components/InfoLinksColumn'
 import {Redirect} from 'react-router-dom'
 
 
@@ -18,28 +19,25 @@ class Explore extends React.Component {
 	    
 	    
   	}
-
-
   	
 
   	render(){
 
-  		
 
   		return(
   			<div>
 			    <Grid>
 				   	<Row>
 				   		<Col sm={4} md={4}>
-				    		<InfoColumn style={style} tableHeader={"Name"} entry1={"dummy"} entry2={"dummy"} entry3={"dummy"}/>
+				    		<InfoLinksColumn style={style} tableHeader={"Agencies"} offer1={"AEE"} offer2={"AAA"} offer3={"DTOP"}/>
 				    	</Col>
 				   
 				   		<Col sm={4} md={4}>
-				    		<InfoColumn style={style} tableHeader={"Wealth"} entry1={"dummy"} entry2={"dummy"} entry3={"dummy"}/>
+				    		<InfoLinksColumn style={style} tableHeader={"Companies"} offer1={"Whitefish"} offer2={"RRContractos"} offer3={"UmbrellaMe"}/>
 				    	</Col>
 				    
 				    	<Col sm={4} md={4} style={style}>
-				    		<InfoColumn style={style} tableHeader={"Hash"} entry1={"dummy"} entry2={"dummy"} entry3={"dummy"}/>
+				    		<InfoLinksColumn style={style} tableHeader={"Offers"} offer1={"AEE 2822"} offer2={"AAA 9099"} offer3={"AEE 8878"}/>
 				    	</Col>
 				    </Row>
 				    

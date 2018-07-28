@@ -8,14 +8,17 @@ class UploadContract extends React.Component {
 	    super(props, context);
     
 	    this.handleChangeName =this.handleChangeName.bind(this);
-	    this.handleChangePass = this.handleChangeDetails.bind(this);
+	    this.handleChangeDetails = this.handleChangeDetails.bind(this);
+	    this.handleChangePrice = this.handleChangePrice.bind(this);
 	    this.goBack = this.goBack.bind(this);
 
 	    this.state = {
 	      companyName: '',
 	      companyDetails: '',
+	      companyPrice: '',
 	      goBack: false,
-	      goExplore: false
+	      goExplore: false, 
+
 	      
 	    };
   	}
@@ -31,6 +34,10 @@ class UploadContract extends React.Component {
 
   	handleChangeDetails(event) {
     	this.setState({companyDetails: event.target.value});
+  	}
+
+  	handleChangePrice(event) {
+    	this.setState({companyPrice: event.target.value});
   	}
 
    FieldGroup(id, label, help, ...props ) {
@@ -56,7 +63,7 @@ class UploadContract extends React.Component {
 			    <Grid>
 				   	<form>
 						<FormGroup>
-							<ControlLabel>Company Name:</ControlLabel>
+							<ControlLabel>Contract Name:</ControlLabel>
 								<FormControl
 									type="text"
 									value={this.state.companyName}
@@ -71,6 +78,15 @@ class UploadContract extends React.Component {
 			            			placeholder="Enter text"
 			            			onChange={this.handleChangeDetails}
 			            			componentClass="textarea"
+			          			/>	  
+
+			          		<ControlLabel>Price Offer:</ControlLabel>
+								<FormControl
+			            			type="text"
+			            			value={this.state.companyPrice}
+			            			placeholder="$xxx,xxx.xx"
+			            			onChange={this.handleChangePrice}
+			            			
 			          			/>	  
 			          		<ControlLabel>File:</ControlLabel>  
 			          		<FormControl

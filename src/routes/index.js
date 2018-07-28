@@ -8,6 +8,7 @@ import UploadOffer from '../screens/UploadOffer'
 import AgencyMenu from '../screens/AgencyMenu'
 import CompanyMenu from '../screens/CompanyMenu'
 import Explore from '../screens/Explore'
+import OfferView from '../screens/OfferView'
 import NoMatch from '../components/NoMatch'
 import NavBar from '../components/NavBar'
 import Welcome from '../components/Welcome'
@@ -26,6 +27,7 @@ const routes = (
       <Route path="/company_menu" component={CompanyMenu} />
       <Route path="/upload_contract" component={UploadContract} />
       <Route path="/upload_offer" component={UploadOffer} />
+      <Route path="/offer_view" component={OfferView} />
       <Route component={NoMatch} />
     </Switch>
   </div>

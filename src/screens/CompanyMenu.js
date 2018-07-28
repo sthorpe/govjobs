@@ -44,11 +44,7 @@ class CompanyMenu extends React.Component {
 				   		<InfoTable/>
 				   		
 				    </Row>
-				    <Row>
-				    	<Col xs={6} xsOffset={5}>
-				    		<Button style={{margin: "10px"}} onClick={this.goToUpload}>Upload Contract</Button>
-				    	</Col>
-				    </Row>
+				    
 			    </Grid>
 			    
 			</div>
