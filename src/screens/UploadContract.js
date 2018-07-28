@@ -48,7 +48,7 @@ class UploadContract extends React.Component {
 
 
   		if(this.state.goBack){
-  			return (<Redirect push to="/explore" />);
+  			return (<Redirect push to="/company_menu" />);
   		}
 
   		return (

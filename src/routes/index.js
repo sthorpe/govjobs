@@ -6,6 +6,7 @@ import CounterScreen from '../screens/CounterScreen'
 import UploadContract from '../screens/UploadContract'
 import UploadOffer from '../screens/UploadOffer'
 import AgencyMenu from '../screens/AgencyMenu'
+import CompanyMenu from '../screens/CompanyMenu'
 import Explore from '../screens/Explore'
 import NoMatch from '../components/NoMatch'
 import NavBar from '../components/NavBar'
@@ -22,6 +23,7 @@ const routes = (
       <Route path="/welcome" component={Welcome} />
       <Route path="/explore" component={Explore} />
       <Route path="/agency_menu" component={AgencyMenu} />
+      <Route path="/company_menu" component={CompanyMenu} />
       <Route path="/upload_contract" component={UploadContract} />
       <Route path="/upload_offer" component={UploadOffer} />
       <Route component={NoMatch} />

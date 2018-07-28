@@ -85,7 +85,13 @@ class Home extends React.Component{
     	const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
 
     	if (this.state.redirect) {
-    		return (<Redirect push to="/agency_menu" />);
+    		if(this.state.emailText === 'agency'){
+    			return (<Redirect push to="/agency_menu" />);
+    		} else {
+    			return (<Redirect push to="/company_menu" />);
+    		}
+
+    		
   		}
 
   		if (this.state.goExplore) {
